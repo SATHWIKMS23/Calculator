@@ -1,0 +1,99 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #222;
+    font-family: Arial, sans-serif;
+}
+
+/* Calculator wrapper */
+.main {
+    width: 90%;
+    max-width: 400px;
+    border: 10px double black;
+    background-color: #000;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Header */
+.heading {
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: yellow;
+    font-size: 24px;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+
+/* Display area */
+.display {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border-top: 2px solid rgb(3, 3, 3);
+    border-bottom: 2px solid rgb(3, 3, 3);
+    height: 100px;
+    padding: 0 15px;
+    background-color: black;
+    color: white;
+    font-size: 40px;
+    overflow-x: auto;
+}
+
+/* Number pad */
+.numbers {
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* Buttons */
+.number {
+    width: 22%;
+    margin: 1%;
+    height: 70px;
+    border: 2px double black;
+    border-radius: 50%;
+    font-size: 24px;
+    background-color: rgb(45, 42, 42);
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.number:hover {
+    background-color: goldenrod;
+    cursor: pointer;
+}
+
+/* Equal button color */
+.r5c4 {
+    color: yellow;
+}
+
+/* Responsive typography and sizes for smaller devices */
+@media screen and (max-width: 480px) {
+    .display {
+        font-size: 28px;
+        height: 80px;
+    }
+
+    .number {
+        width: 22%;
+        height: 60px;
+        font-size: 20px;
+    }
+
+    .heading {
+        font-size: 20px;
+        padding: 8px 0;
+    }
+}
