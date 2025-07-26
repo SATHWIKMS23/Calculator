@@ -23,17 +23,18 @@ function calculator(userInput) {
         const display = document.querySelector('#display');
         display.innerText += userInput;
     }
+function calculate() {
+    const display = document.querySelector('#display');
+    let expression = display.innerText;
 
-    function calculate() {
-        const display = document.querySelector('#display');
-        let expression = display.innerText;
+    expression = expression.replace(/X/g, '*');
 
-        expression = expression.replace(/X/g, '*');
+    expression = expression.replace(/(\d+)%/g, '($1/100)');
 
-        try {
-            const result = eval(expression); 
-            display.innerText = result;
-        } catch (error) {
-            display.innerText = 'Error';
-        }
+    try {
+        const result = eval(expression);
+        display.innerText = result;
+    } catch (error) {
+        display.innerText = 'Error';
     }
+}
